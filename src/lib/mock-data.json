@@ -1,0 +1,74 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Your Kid May Already Be Watching AI-Generated Videos on YouTube",
+      "image": "/post-1.png",
+      "tag": "AI",
+      "read_time": "5 mins"
+    },
+    {
+      "id": 2,
+      "title": "The first rule of the systems developer reading textbook group is...",
+      "image": "/post-2.png",
+      "tag": "Software Development",
+      "read_time": "5 min"
+    },
+    {
+      "id": 3,
+      "title": "Beware's the night when AI-generated content walks",
+      "image": "/post-3.png",
+      "tag": "AI",
+      "read_time": "3 min"
+    },
+    {
+      "id": 4,
+      "title": "A new era of blockchain-powered creativity is dawning",
+      "image": "/post-4.png",
+      "tag": "Blockchain",
+      "read_time": "4 min"
+    },
+    {
+      "id": 5,
+      "title": "How IoT is transforming smart home technology",
+      "image": "/post-5.png",
+      "tag": "IoT",
+      "read_time": "6 min"
+    },
+    {
+      "id": 6,
+      "title": "Quantum computing: How to avoid catastrophic errors in your code",
+      "image": "/post-6.png",
+      "tag": "Quantum Computing",
+      "read_time": "7 min"
+    },
+    {
+      "id": 7,
+      "title": "How to avoid suspicious growling in your microservices",
+      "image": "/post-7.png",
+      "tag": "DevOps",
+      "read_time": "5 min"
+    },
+    {
+      "id": 8,
+      "title": "How the Pentagon's Latest AI Use Is Inspiring New Targets—and New Tunes",
+      "image": "/post-8.png",
+      "tag": "AI",
+      "read_time": "4 min"
+    },
+    {
+      "id": 9,
+      "title": "AI-generated Love Conquers Chinese Hearts & Wallets",
+      "image": "/post-9.png",
+      "tag": "AI",
+      "read_time": "3 min"
+    },
+    {
+      "id": 10,
+      "title": "How AI is transforming the way we create and consume content",
+      "image": "/post-10.png",
+      "tag": "AI",
+      "read_time": "6 min"
+    }
+  ]
+}

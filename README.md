@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Lite Tech Blog
+
+Lite Tech Blog is a modern, responsive web application built with Next.js, TypeScript, and Tailwind CSS. It showcases the latest technology articles and blog posts in a sleek, user-friendly interface.
+
+## Features
+
+- Responsive design for optimal viewing on all devices
+- Dynamic content loading with server-side rendering
+- Topic filtering for easy navigation
+- Most viewed posts section
+- New post creation with image upload
+- Seamless integration with Vercel Blob for image storage
+- PostgreSQL database for content management
+
+## Technologies Used
+
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- Shadcn UI
+- Radix UI
+- React Hook Form
+- Zod for form validation
+- Vercel Postgres
+- Vercel Blob
+- Bun
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Bun or Node.js (v18 or later)
+- Vercel account (for deployment and database)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
+   ```
+   git clone https://gitlab.com/litebox/internal/challenges/dev-joaquin-ponzone-frontend.git
+   cd dev-joaquin-ponzone-frontend
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. Install dependencies:
+   ```
+   bun install
+   ```
 
-## Learn More
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory and add the following:
+   ```
+   POSTGRES_URL=your_postgres_connection_string
+   BLOB_READ_WRITE_TOKEN=your_vercel_blob_token
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. Run the development server:
+   ```
+   bun run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Database Seeding
 
-## Deploy on Vercel
+To populate the database with initial data, run:
+   ```
+   bun run seed
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
