@@ -6,9 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "seed": "bun run src/server/db-seeder.ts",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
+    "lint": "next lint && prettier --check .",
+    "format": "prettier --write .",
+    "seed": "bun run src/server/db-seeder.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",

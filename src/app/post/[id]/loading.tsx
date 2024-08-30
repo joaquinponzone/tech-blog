@@ -63,7 +63,7 @@ export default function PostPageLoading() {
             {[...Array(3)].map((_, index) => (
               <div key={index} className="relative overflow-hidden rounded-lg">
                 <Skeleton className="h-64 w-full" />
-                <div className="absolute bottom-0 left-0 p-4 w-full">
+                <div className="absolute bottom-0 left-0 w-full p-4">
                   <Skeleton className="mb-2 h-4 w-16" />
                   <Skeleton className="mb-2 h-6 w-full" />
                   <div className="flex justify-between">

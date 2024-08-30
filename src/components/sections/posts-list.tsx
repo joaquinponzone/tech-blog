@@ -41,7 +41,7 @@ export default async function PostsList({ limit, tags }: { limit: number; tags?:
           </div>
         )}
       </div>
-      <div className="hidden lg:block w-1/5">
+      <div className="hidden w-1/5 lg:block">
         <MostViewedPosts />
       </div>
     </div>
