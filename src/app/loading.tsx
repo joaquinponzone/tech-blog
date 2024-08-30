@@ -19,7 +19,7 @@ export default function Loading() {
             <div className="h-10 w-32 animate-pulse rounded-md bg-gray-300" />
           </div>
         </div>
-        <div className="w-1/5">
+        <div className="hidden lg:block lg:w-1/5">
           <MostViewedPostsSkeleton />
         </div>
       </div>

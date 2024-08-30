@@ -12,7 +12,7 @@ export default async function PostPage({ params }: { params: { id: string } }) {
   const { data: post } = await response.json()
 
   return (
-    <section className="bg-white text-black">
+    <main className="bg-white text-black">
       <div className="relative h-[45vh] w-full lg:h-[60vh]">
         <Image
           src={post.image}
@@ -21,9 +21,9 @@ export default async function PostPage({ params }: { params: { id: string } }) {
           style={{ objectFit: 'cover' }}
           priority
         />
-        <div className="button-0 absolute top-28 p-2 lg:bottom-20 lg:p-6 2xl:left-64">
-          <div className="mx-16 w-fit min-w-[300px] max-w-4xl lg:min-w-[400px]">
-            <div className="absolute -top-20 left-20 size-full">
+        <div className="button-0 absolute top-48 p-2 lg:bottom-20 lg:p-6 2xl:left-64">
+          <div className="mx-4 lg:mx-16 lg:min-w-[400px]">
+            <div className="absolute bottom-20 size-full">
               <Link
                 href="/"
                 className={`flex items-center gap-2 ${buttonVariants({ variant: 'secondary' })}`}
@@ -40,7 +40,7 @@ export default async function PostPage({ params }: { params: { id: string } }) {
           </div>
         </div>
       </div>
-      <main className="container mx-auto max-w-6xl grow space-y-12 px-4">
+      <section className="container mx-auto max-w-6xl grow space-y-12 px-4">
         <div className="flex gap-8 py-32">
           <div className="w-full lg:w-2/3">
             <div className="prose prose-lg max-w-none">
@@ -82,7 +82,7 @@ export default async function PostPage({ params }: { params: { id: string } }) {
               </p>
             </div>
           </div>
-          <div className="hidden w-1/3 lg:block">
+          <div className="hidden lg:block lg:w-1/3">
             <div className="sticky top-24 space-y-8">
               <div className="rounded-lg bg-gray-100 p-6">
                 <h3 className="mb-4 text-xl font-semibold text-gray-800">Share on</h3>
@@ -103,7 +103,7 @@ export default async function PostPage({ params }: { params: { id: string } }) {
         </div>
         <RelatedPosts />
         <Footer />
-      </main>
-    </section>
+      </section>
+    </main>
   )
 }
