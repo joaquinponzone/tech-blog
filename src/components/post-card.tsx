@@ -51,7 +51,7 @@ export default async function PostCard({ postId }: { postId: number }) {
             <span>Read</span>
             <ArrowRight className="size-4 text-purple-500" />
           </Link>
-          <div className="mt-2 flex items-center space-x-2 text-sm ">
+          <div className="mt-2 flex items-center space-x-2 text-sm">
             <Clock className="size-4" />
             <span>{post.read_time}</span>
           </div>

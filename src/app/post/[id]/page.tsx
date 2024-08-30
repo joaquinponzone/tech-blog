@@ -1,7 +1,7 @@
 import Footer from '@/components/sections/footer'
 import { apiUrl } from '@/lib/site-config'
 import Image from 'next/image'
-import { ArrowLeftIcon, FacebookIcon, TwitterIcon } from 'lucide-react'
+import { ArrowLeftIcon, Clock, FacebookIcon, TwitterIcon } from 'lucide-react'
 import Link from 'next/link'
 import MostViewedPosts from '@/components/sections/most-viewed'
 import { buttonVariants } from '@/components/ui/button'
@@ -13,7 +13,7 @@ export default async function PostPage({ params }: { params: { id: string } }) {
 
   return (
     <section className="bg-white text-black">
-      <div className="relative h-[40vh] w-full lg:h-[60vh]">
+      <div className="relative h-[45vh] w-full lg:h-[60vh]">
         <Image
           src={post.image}
           alt={post.title || 'Post cover image'}
@@ -21,7 +21,7 @@ export default async function PostPage({ params }: { params: { id: string } }) {
           style={{ objectFit: 'cover' }}
           priority
         />
-        <div className="button-0 absolute p-2 lg:bottom-20 lg:p-6 2xl:left-64">
+        <div className="button-0 absolute top-28 p-2 lg:bottom-20 lg:p-6 2xl:left-64">
           <div className="mx-16 w-fit min-w-[300px] max-w-4xl lg:min-w-[400px]">
             <div className="absolute -top-20 left-20 size-full">
               <Link
@@ -32,9 +32,10 @@ export default async function PostPage({ params }: { params: { id: string } }) {
               </Link>
             </div>
             <span className="bg-white p-4 text-base text-black">By Marvin Kale</span>
-            <h1 className="bg-white p-4 text-4xl font-bold text-black">{post.title}</h1>
-            <div className="flex items-center">
-              <span className="bg-white p-4 text-sm text-black">{post.read_time}</span>
+            <h1 className="bg-white p-4 text-2xl font-bold text-black lg:text-4xl">{post.title}</h1>
+            <div className="flex w-fit items-center gap-2 bg-white p-2 text-xs">
+              <Clock className="size-3" />
+              <span>{post.read_time}</span>
             </div>
           </div>
         </div>
@@ -57,8 +58,8 @@ export default async function PostPage({ params }: { params: { id: string } }) {
               <Image
                 src={post.image}
                 alt="Post content image"
-                width={800}
-                height={400}
+                width={400}
+                height={600}
                 className="my-8"
               />
               <p>Pellentesque venenatis arcu lectus, quis</p>
