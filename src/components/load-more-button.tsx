@@ -1,9 +1,9 @@
-"use client"
+'use client'
 
-import { useRouter, useSearchParams } from "next/navigation"
-import { Button } from "@/components/ui/button"
-import { useEffect, useRef, useState } from "react"
-import { Loader2 } from "lucide-react"
+import { useRouter, useSearchParams } from 'next/navigation'
+import { Button } from '@/components/ui/button'
+import { useEffect, useRef, useState } from 'react'
+import { Loader2 } from 'lucide-react'
 
 export default function LoadMoreButton() {
   const searchParams = useSearchParams()
@@ -26,17 +26,15 @@ export default function LoadMoreButton() {
     setIsLoading(true)
     scrollPositionRefLoadMore.current = window.scrollY
     const params = new URLSearchParams(searchParams)
-    const currentLimit = Number(params.get("limit") || "8")
+    const currentLimit = Number(params.get('limit') || '8')
     const newLimit = currentLimit + 3
-    params.set("limit", newLimit.toString())
+    params.set('limit', newLimit.toString())
     replace(`?${params.toString()}`, { scroll: false })
   }
 
   return (
     <Button onClick={handleLoadMore} disabled={isLoading}>
-      {isLoading ? (
-        <Loader2 className="animate-spin" />
-      ) : "Load more"}
+      {isLoading ? <Loader2 className="animate-spin" /> : 'Load more'}
     </Button>
   )
 }

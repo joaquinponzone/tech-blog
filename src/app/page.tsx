@@ -3,7 +3,6 @@ import Footer from '@/components/sections/footer'
 import PostsList from '@/components/sections/posts-list'
 import Topics from '@/components/sections/topics'
 
-
 export default async function HomePage({
   searchParams,
 }: {
@@ -19,7 +18,7 @@ export default async function HomePage({
     <main className="container mx-auto max-w-7xl grow space-y-12 px-4">
       <HeroSection />
       <Topics />
-      <PostsList limit={limit} tags={tags}/>
+      <PostsList limit={limit} tags={tags} />
       <Footer />
     </main>
   )

@@ -1,7 +1,6 @@
-import mockData from '@/lib/mock-data.json';
-import { Post } from '@/lib/types';
-import { sql } from '@vercel/postgres';
-
+import mockData from '@/lib/mock-data.json'
+import { Post } from '@/lib/types'
+import { sql } from '@vercel/postgres'
 
 export async function seed() {
   const createTable = await sql`
@@ -12,16 +11,16 @@ export async function seed() {
       tag VARCHAR(100) NOT NULL,
       read_time VARCHAR(50) NOT NULL
     );
-  `;
+  `
 
-  console.log(`Created "posts" table`);
+  console.log(`Created "posts" table`)
 
-  const posts: Omit<Post, 'id'>[] = mockData.posts.map(post => ({
+  const posts: Omit<Post, 'id'>[] = mockData.posts.map((post) => ({
     title: post.title,
     image: post.image,
     tag: post.tag,
-    read_time: post.read_time
-  }));
+    read_time: post.read_time,
+  }))
 
   const insertedPosts = await Promise.all(
     posts.map(
@@ -31,12 +30,12 @@ export async function seed() {
         ON CONFLICT DO NOTHING;
       `
     )
-  );
+  )
 
-  console.log(`Seeded ${posts.length} posts`);
+  console.log(`Seeded ${posts.length} posts`)
 
   return {
     createTable,
     insertedPosts,
-  };
+  }
 }

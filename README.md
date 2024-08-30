@@ -35,24 +35,28 @@ Lite Tech Blog is a modern, responsive web application built with Next.js, TypeS
 ### Installation
 
 1. Clone the repository:
+
    ```
    git clone https://gitlab.com/litebox/internal/challenges/dev-joaquin-ponzone-frontend.git
    cd dev-joaquin-ponzone-frontend
    ```
 
 2. Install dependencies:
+
    ```
    bun install
    ```
 
 3. Set up environment variables:
    Create a `.env.local` file in the root directory and add the following:
+
    ```
    POSTGRES_URL=your_postgres_connection_string
    BLOB_READ_WRITE_TOKEN=your_vercel_blob_token
    ```
 
 4. Run the development server:
+
    ```
    bun run dev
    ```
@@ -62,7 +66,7 @@ Lite Tech Blog is a modern, responsive web application built with Next.js, TypeS
 ### Database Seeding
 
 To populate the database with initial data, run:
-   ```
-   bun run seed
-   ```
 
+```
+bun run seed
+```

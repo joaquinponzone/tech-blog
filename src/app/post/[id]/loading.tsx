@@ -1,11 +1,11 @@
-import { Skeleton } from "@/components/ui/skeleton"
-import { ArrowLeftIcon } from "lucide-react"
-import Link from "next/link"
-import { Button, buttonVariants } from "@/components/ui/button"
+import { Skeleton } from '@/components/ui/skeleton'
+import { ArrowLeftIcon } from 'lucide-react'
+import Link from 'next/link'
+import { Button, buttonVariants } from '@/components/ui/button'
 
 export default function PostPageLoading() {
   return (
-    <section className='bg-white text-black'>
+    <section className="bg-white text-black">
       <div className="relative h-[40vh] w-full lg:h-[60vh]">
         <Skeleton className="size-full" />
         <div className="button-0 absolute p-2 lg:bottom-20 lg:p-6 2xl:left-64">

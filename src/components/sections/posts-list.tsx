@@ -11,15 +11,18 @@ async function getPosts(limit: number, tags?: string) {
   return { posts: data.posts, totalPosts: data.totalPosts }
 }
 
-export default async function PostsList({limit, tags}: {limit: number, tags?: string}) {
-
+export default async function PostsList({ limit, tags }: { limit: number; tags?: string }) {
   const { posts, totalPosts } = await getPosts(limit, tags)
 
   const remainingPosts = posts?.slice(4)
   return (
     <div className="flex gap-12">
       <div className="flex-1 space-y-12">
-        {posts?.length > 0 ? <PostsGrid posts={posts.slice(0, 3)} startIndex={1} /> : <div>No posts found</div>}
+        {posts?.length > 0 ? (
+          <PostsGrid posts={posts.slice(0, 3)} startIndex={1} />
+        ) : (
+          <div>No posts found</div>
+        )}
         <SubscribeBanner />
         {remainingPosts?.length > 0 && (
           <>
