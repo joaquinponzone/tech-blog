@@ -3,6 +3,8 @@ import { query } from '@/db/db'
 
 import { NextResponse } from 'next/server'
 
+export const dynamic = 'force-dynamic'
+
 export async function GET() {
   const { rows: posts } = await query(`SELECT * FROM posts ORDER BY id DESC`)
 

@@ -1,6 +1,8 @@
 import { query } from '@/db/db'
 import { NextResponse } from 'next/server'
 
+export const dynamic = 'force-dynamic'
+
 export async function GET() {
   try {
     const result = await query('SELECT 1 AS connection_test')
