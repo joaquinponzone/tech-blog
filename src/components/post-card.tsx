@@ -1,3 +1,4 @@
+import { apiUrl } from '@/lib/site-config'
 import { Post } from '@/lib/types'
 import { ArrowRight, Clock } from 'lucide-react'
 import Image from 'next/image'
@@ -5,9 +6,7 @@ import Link from 'next/link'
 import React from 'react'
 
 async function getPost(postId: number) {
-  const response = postId
-    ? await fetch(`http://localhost:3000/api/post/${postId}`, { cache: 'no-store' })
-    : null
+  const response = postId ? await fetch(`${apiUrl}/post/${postId}`, { cache: 'no-store' }) : null
   const { data } = response?.ok ? await response.json() : null
   const post = data as Post
   return post
