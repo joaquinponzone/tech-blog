@@ -4,7 +4,10 @@ import { put } from '@vercel/blob'
 import { query } from '@/db/db'
 
 export async function GET() {
-  const { rows: posts } = await query(`SELECT * FROM posts WHERE tag = $1 LIMIT 3`, ['Related'])
+  const { rows: posts } = await query(
+    `SELECT * FROM posts WHERE tag = $1 ORDER BY id DESC LIMIT 3`,
+    ['Related']
+  )
 
   return NextResponse.json({
     data: posts,
