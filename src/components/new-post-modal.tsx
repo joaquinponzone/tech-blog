@@ -12,6 +12,7 @@ import {
 } from '@/components/ui/dialog'
 import { NewPostForm } from './new-post-form'
 import { Button } from './ui/button'
+import { siteConfig } from '@/config/site'
 
 export default function NewPostModal({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false)
@@ -25,7 +26,20 @@ export default function NewPostModal({ children }: { children: React.ReactNode }
           <div className="grid gap-8">
             <DialogHeader>
               <DialogTitle className="text-center text-3xl text-black">
-                Your post was successfully uploaded!
+                {siteConfig.postingDisabled ? (
+                  <span className="flex flex-col items-center justify-center gap-2">
+                    <p className="text-center text-2xl">✋🏼 Post creation is disabled.</p>
+                    <p className="my-5 text-center text-lg font-bold">
+                      Not the best news, but it&apos;s a good time to learn about the{' '}
+                      <a href="https://github.com/joaquinponzone" target="_blank">
+                        admin
+                      </a>
+                      .
+                    </p>
+                  </span>
+                ) : (
+                  'Your post was successfully uploaded!'
+                )}
               </DialogTitle>
             </DialogHeader>
             <DialogFooter>

@@ -54,13 +54,17 @@ export function NewPostForm({ setDone }: { setDone: () => void }) {
     formData.append('read_time', data.read_time)
 
     try {
-      const response = await fetch(`${apiUrl}/posts/related`, {
-        method: 'POST',
-        body: formData,
-      })
-      if (!response.ok) {
-        throw new Error(`Error: ${response.statusText}`)
-      }
+      // const response = await fetch(`${apiUrl}/posts/related`, {
+      //   method: 'POST',
+      //   body: formData,
+      // })
+      // if (!response.ok) {
+      //   throw new Error(`Error: ${response.statusText}`)
+      // }
+
+      await new Promise((resolve) => setTimeout(resolve, 2000))
+      console.log('Finished loading')
+
       form.reset()
       setPreviewUrl(null)
       setFile(null)
